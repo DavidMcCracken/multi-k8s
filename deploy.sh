@@ -10,7 +10,7 @@ docker push twokdavey/multi-client:$SHA
 docker push twokdavey/multi-server:$SHA
 docker push twokdavey/multi-worker:$SHA
 
-kubectl apply -f k8s
+kubectl apply -f K8s
 
 kubectl set image deployments/server-deployment server=twokdavey/multi-server:$SHA
 kubectl set image deployments/client-deployment client=twokdavey/multi-client:$SHA
